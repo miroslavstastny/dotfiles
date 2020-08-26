@@ -233,10 +233,6 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSNavLastRootDirectory</key>
-	<string>~</string>
-	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{799, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -257,7 +253,7 @@
 	dWxs0g0ODxJaTlMub2JqZWN0c1YkY2xhc3OiEBGAAoAKgA3TFA0OFRkdV05TLmtleXOj
 	FhcYgAOABIAFoxobHIAGgAeACIAJWklkZW50aWZpZXJVV2lkdGhWSGlkZGVuUTAjQGjA
 	AAAAAAAI0iUmJyhaJGNsYXNzbmFtZVgkY2xhc3Nlc1xOU0RpY3Rpb25hcnmiJylYTlNP
-	YmplY3TTFA0OKy8doxYXGIADgASABaMwMRyAC4AMgAiACVExI0BzsZ2yLQ5W0iUmNzhe
+	YmplY3TTFA0OKy8doxYXGIADgASABaMwMRyAC4AMgAiACVExI0B0oZ2yLQ5W0iUmNzhe
 	TlNNdXRhYmxlQXJyYXmjNzkpV05TQXJyYXkACAARABoAJAApADIANwBJAEwAUgBUAGMA
 	aQBuAHkAgACDAIUAhwCJAJAAmACcAJ4AoACiAKYAqACqAKwArgC5AL8AxgDIANEA0gDX
 	AOIA6wD4APsBBAELAQ8BEQETARUBGQEbAR0BHwEhASMBLAExAUABRAAAAAAAAAIBAAAA
@@ -279,11 +275,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>0 147 224 275 0 0 2560 1417 </string>
-	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>880 742 799 448 0 0 2560 1417 </string>
+	<string>0 147 224 275 0 0 2048 1257 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>188 153 1110 724 0 0 2560 1417 </string>
+	<string>236 388 941 724 0 0 2048 1257 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>266 318 1130 707 0 0 2048 1257 </string>
+	<key>NeverWarnAboutShortLivedSessions_6483A356-42E0-42BD-ABB6-E9A6B3B67573</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_6483A356-42E0-42BD-ABB6-E9A6B3B67573_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -479,7 +479,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>80</integer>
+			<integer>160</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
@@ -860,7 +860,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>25</integer>
+			<integer>40</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
@@ -922,20 +922,16 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {2560, 1440}}</string>
+		<string>{{0, 0}, {2048, 1280}}</string>
 		<key>topLeft</key>
-		<string>{958, 1131}</string>
+		<string>{702, 1011}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
-	<string>E40C1C45-8940-4091-94FB-9ACA788468D6</string>
+	<string>093238D3-39AB-4A46-BF2E-94A2DE347C15</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>5</integer>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<integer>3</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>620299392.49714696</real>
+	<real>620300817.55623806</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
 	<key>NoSyncRecordedVariables</key>
@@ -1288,14 +1284,6 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.terminalWindowName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
 				<string>currentTab.currentSession.terminalIconName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -1423,14 +1411,6 @@
 		</array>
 		<key>2</key>
 		<array>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.terminalWindowName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
 			<dict>
 				<key>isTerminal</key>
 				<true/>
@@ -1617,19 +1597,19 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
 				<false/>
 				<key>name</key>
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
 			</dict>
 		</array>
 		<key>4</key>
@@ -1661,7 +1641,7 @@
 		</array>
 	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
-	<real>620126592.49694204</real>
+	<real>620128017.55612898</real>
 	<key>PrefsCustomFolder</key>
 	<string>~/.dotfiles/iterm2</string>
 	<key>PromptOnQuit</key>
@@ -1673,11 +1653,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final_new.xml?shard=13</string>
+	<string>https://iterm2.com/appcasts/final_new.xml?shard=48</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-08-26T09:26:22Z</date>
+	<date>2020-08-26T11:37:23Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
