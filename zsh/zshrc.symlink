@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
@@ -19,7 +26,9 @@ zpi() { zinit ice lucid                            "${@}"; } # Regular Ice
 zp()  { [ -z $2 ] && zinit light "${@}" || zinit "${@}"; } # zinit
 
 # Load nvm before sourcing other scripts
-export NVM_LAZY_LOAD=true
+# no lazy (for now) in order for powerline to work as expected
+# export NVM_LAZY_LOAD=true
+
 zinit load lukechilds/zsh-nvm
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
@@ -66,3 +75,6 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

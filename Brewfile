@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 
 brew 'git'
+brew 'gh'
 brew 'graphviz'
 brew 'yarn'
 brew 'mas'
