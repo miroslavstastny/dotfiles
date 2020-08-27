@@ -1,0 +1,68 @@
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/.dotfiles
+
+# Install zinit if not installed
+if [ ! -d "${HOME}/.zinit" ]; then
+  mkdir ${HOME}/.zinit
+	git clone https://github.com/zdharma/zinit ${HOME}/.zinit/bin
+	zcompile ${HOME}/.zinit/bin/zinit.zsh
+fi
+
+### Added by Zplugin's installer
+source "${HOME}/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+### Functions to make zinit configuration less verbose
+zpt() { zinit ice wait"${1}" lucid               "${@:2}"; } # Turbo
+zpi() { zinit ice lucid                            "${@}"; } # Regular Ice
+zp()  { [ -z $2 ] && zinit light "${@}" || zinit "${@}"; } # zinit
+
+# Load nvm before sourcing other scripts
+export NVM_LAZY_LOAD=true
+zinit load lukechilds/zsh-nvm
+
+# Stash your environment variables in ~/.localrc. This means they'll stay out
+# of your main dotfiles repository (which may be public, like this one), but
+# you'll have access to them in your scripts.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# all of our zsh files
+typeset -U config_files
+config_files=($ZSH/**/*.zsh)
+
+# load the path files
+for file in ${(M)config_files:#*/path.zsh}
+do
+  source $file
+done
+
+# load everything but the path and completion files
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+do
+  source $file
+done
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+
+# load every completion after autocomplete loads
+for file in ${(M)config_files:#*/completion.zsh}
+do
+  source $file
+done
+
+unset config_files
+
+# Better history
+# Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
