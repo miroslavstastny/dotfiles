@@ -18,6 +18,16 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
@@ -29,6 +39,13 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Scroll reverser
 defaults write com.pilotmoon.scroll-reverser ReverseTablet -bool false
 defaults write com.pilotmoon.scroll-reverser ReverseTrackpad -bool false
+
+###############################################################################
+# Keyboard                                                                    #
+###############################################################################
+
+# Use all F1, F2 as standard keys
+defaults write -g com.apple.keyboard.fnState -bool true
 
 ###############################################################################
 # Activity Monitor                                                            #
@@ -46,6 +63,22 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # Sort Activity Monitor results by CPU usage
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+###############################################################################
+# Energy saving                                                               #
+###############################################################################
+
+# Enable lid wakeup
+# sudo pmset -a lidwake 1
+
+# Sleep the display after 15 minutes
+sudo pmset -a displaysleep 15
+
+# Disable machine sleep while charging
+sudo pmset -c sleep 0
+
+# Set machine sleep to 5 minutes on battery
+sudo pmset -b sleep 5
 
 ###############################################################################
 # Kill affected applications                                                  #

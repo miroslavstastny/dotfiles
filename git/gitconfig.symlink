@@ -4,3 +4,6 @@
 
 [pull]
 	ff = only
+	
+[credential]
+	helper = !/usr/local/Cellar/openjdk/14.0.1/libexec/openjdk.jdk/Contents/Home/bin/java -Ddebug=false -Djava.net.useSystemProxies=true -jar /usr/local/Cellar/git-credential-manager/2.0.4_2/libexec/git-credential-manager-2.0.4.jar

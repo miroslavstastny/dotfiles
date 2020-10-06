@@ -12,6 +12,8 @@ function git_main_branch() {
 alias gcm='git checkout $(git_main_branch)'
 alias gco='git checkout'
 
+alias gd='git diff'
+
 alias gf='git fetch'
 alias gfa='git fetch --all --prune'
 alias gfo='git fetch origin'
@@ -26,3 +28,15 @@ alias gmum='git merge upstream/$(git_main_branch)'
 
 alias gp='git push'
 alias gst='git status'
+
+# use the default stash push on git 2.13 and newer
+autoload -Uz is-at-least
+is-at-least 2.13 "$(git --version 2>/dev/null | awk '{print $3}')" \
+  && alias gsta='git stash push' \
+  || alias gsta='git stash save'
+
+alias gstp='git stash pop'
+
+alias grhh='git reset --hard'
+
+alias gup='git pull --rebase'
