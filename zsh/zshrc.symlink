@@ -8,6 +8,10 @@ fi
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
+setopt autocd
+setopt autopushd
+setopt pushdminus
+
 # Install zinit if not installed
 if [ ! -d "${HOME}/.zinit" ]; then
   mkdir ${HOME}/.zinit
