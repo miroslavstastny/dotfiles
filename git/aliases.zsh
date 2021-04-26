@@ -10,9 +10,14 @@ function git_main_branch() {
 }
 
 alias cdgr='cd `git rev-parse --show-toplevel`'
+cdf() {
+        cd `lerna exec --loglevel silent --scope @fluentui/$1 "pwd"`
+}
 
 alias gcm='git checkout $(git_main_branch)'
 alias gco='git checkout'
+
+alias gcam='git commit -a -m'
 
 alias gd='git diff'
 
@@ -27,6 +32,7 @@ alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgr
 
 alias gmom='git merge origin/$(git_main_branch)'
 alias gmum='git merge upstream/$(git_main_branch)'
+alias grum='git rebase upstream/$(git_main_branch)'
 
 alias gp='git push'
 alias gst='git status'
