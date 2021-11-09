@@ -22,4 +22,4 @@ cask 'vlc'
 cask 'webstorm'
 
 mas "Magnet", id: 441258766
-
+mas "Bear", id: 1091189122
