@@ -37,8 +37,8 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Scroll reverser
-defaults write com.pilotmoon.scroll-reverser ReverseTablet -bool false
-defaults write com.pilotmoon.scroll-reverser ReverseTrackpad -bool false
+#defaults write com.pilotmoon.scroll-reverser ReverseTablet -bool false
+#defaults write com.pilotmoon.scroll-reverser ReverseTrackpad -bool false
 
 ###############################################################################
 # Keyboard                                                                    #
@@ -79,6 +79,13 @@ sudo pmset -c sleep 0
 
 # Set machine sleep to 5 minutes on battery
 sudo pmset -b sleep 5
+
+###############################################################################
+# Printer                                                                     #
+###############################################################################
+
+# disable Preview's default print scaling
+defaults write com.apple.Preview PVImagePrintingScaleMode -bool false
 
 ###############################################################################
 # Kill affected applications                                                  #

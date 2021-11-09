@@ -4,12 +4,15 @@ brew 'coreutils'
 brew 'ffmpeg'
 brew 'gifsicle'
 brew 'git'
-brew 'git-credential-manager'
 brew 'gh'
 brew 'graphviz'
+brew 'jq'
 brew 'yarn'
 brew 'mas'
 brew 'unrar'
+
+tap 'microsoft/git'
+cask 'git-credential-manager-core'
 
 cask 'iterm2'
 cask 'p4v'
@@ -19,4 +22,4 @@ cask 'vlc'
 cask 'webstorm'
 
 mas "Magnet", id: 441258766
-mas "XMind", id: 1327661892
+
