@@ -16,7 +16,7 @@ cask 'git-credential-manager-core'
 
 cask 'iterm2'
 cask 'p4v'
-cask 'scroll-reverser'
+# cask 'scroll-reverser'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'webstorm'
