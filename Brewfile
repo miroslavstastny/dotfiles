@@ -21,3 +21,6 @@ cask 'vlc'
 cask 'webstorm'
 
 mas "Magnet", id: 441258766
+mas "iStat Menus", id: 1319778037
+mas "Snap", id: 418073146
+mas "Xnip", id: 1221250572
