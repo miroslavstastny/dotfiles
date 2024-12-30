@@ -13,13 +13,15 @@
 [core]
 	precomposeUnicode = true
 	autocrlf = input
+	excludesfile = /Users/mistastn/.gitignore
 [safe]
 	directory = /Users/mistastn/devel/teams-modular-packages
-[credential]
-	helper = /usr/local/share/gcm-core/git-credential-manager-core
-[credential "https://dev.azure.com"]
-	useHttpPath = true
 [safe]
 	directory = /Users/mistastn/devel/teams-modular-packages
 [init]
 	defaultBranch = main
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true

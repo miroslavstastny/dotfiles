@@ -35,6 +35,7 @@ alias gmum='git merge upstream/$(git_main_branch)'
 alias grum='git rebase upstream/$(git_main_branch)'
 
 alias gp='git push'
+alias gpo='gp -u origin $(git branch --show-current)'
 alias gst='git status'
 
 # use the default stash push on git 2.13 and newer

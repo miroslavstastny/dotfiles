@@ -91,3 +91,5 @@ source ~/.torusrc
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/p10k.zsh.symlink.
 [[ ! -f ~/.dotfiles/zsh/p10k.zsh.symlink ]] || source ~/.dotfiles/zsh/p10k.zsh.symlink
+
+source ~/.zshrc.local

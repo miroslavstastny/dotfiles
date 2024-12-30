@@ -7,3 +7,8 @@ macOS dotfiles
 - run `~/.dotfiles/script/bootstrap`
 
 - edit `~/.gitconfig.local`
+
+## Update
+```shell
+source ~/.dotfiles/script/bootstrap
+```

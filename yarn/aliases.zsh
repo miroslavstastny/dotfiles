@@ -1,6 +1,7 @@
 alias y='yarn'
 alias yst='yarn start'
 alias ysb='yarn storybook'
+alias ysw='yarn start:watch'
 alias yb='yarn build'
 alias ybt='yarn buildto'
 alias yt='yarn test'
